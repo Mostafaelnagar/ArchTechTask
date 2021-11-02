@@ -4,7 +4,6 @@ plugins {
   id(Config.Plugins.kotlinKapt)
   id(Config.Plugins.hilt)
   id(Config.Plugins.navigationSafeArgs)
-  id(Config.Plugins.google_services)
 }
 
 android {
@@ -70,10 +69,10 @@ dependencies {
 
   //Ted bottom picker
   implementation(Libraries.ted_bottom_picker)
+//Full screen
+  implementation(Libraries.full_screen)
+  implementation(Libraries.picasso)
 
   // Project Modules
   implementation(project(Config.Modules.domain))
-  implementation(project(Config.Modules.prettyPopUp))
-  implementation(project(Config.Modules.appTutorial))
-  implementation(project(Config.Modules.imagesSlider))
 }

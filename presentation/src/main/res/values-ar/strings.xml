@@ -10,7 +10,7 @@
 
   <!-- Home -->
   <string name="home">الرئيسية</string>
-  <string name="search">البحث</string>
+  <string name="search_movie">البحث</string>
   <string name="account">حسابى</string>
 
   <!-- Tutorial -->
@@ -39,5 +39,7 @@
   <string name="explore_app">تريد تصفح خدمات التطبيق</string>
   <string name="continue_as_guest">المتابعة كضيف</string>
     <string name="send">Send</string>
+  <string name="search">Search</string>
+    <string name="movie_trailer">Movie videos</string>
 
 </resources>

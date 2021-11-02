@@ -15,7 +15,6 @@ object Config {
     const val navigationSafeArgs =
       "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.androidNavigation}"
     const val hilt = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hiltVersion}"
-    const val google_services = "com.google.gms:google-services:${Versions.google_services}"
   }
 
   object Plugins {
@@ -27,20 +26,17 @@ object Config {
     const val androidLibrary = "com.android.library"
     const val kotlinJvm = "org.jetbrains.kotlin.jvm"
     const val ktLint = "org.jlleitschuh.gradle.ktlint"
-    const val google_services = "com.google.gms.google-services"
+    const val kotlinExt = "org.jetbrains.kotlin.android.extensions"
   }
 
   object Modules {
     const val domain = ":domain"
     const val data = ":data"
     const val presentation = ":presentation"
-    const val prettyPopUp = ":prettyPopUp"
-    const val appTutorial = ":appTutorial"
-    const val imagesSlider = ":imagesSlider"
   }
 
   object Environments {
-    const val debugBaseUrl = "\"https://aber.my-staff.net/api/\""
-    const val releaseBaseUrl = "\"https://aber.my-staff.net/api/\""
+    const val debugBaseUrl = "\"https://api.themoviedb.org/3/\""
+    const val releaseBaseUrl = "\"https://api.themoviedb.org/3/\""
   }
 }

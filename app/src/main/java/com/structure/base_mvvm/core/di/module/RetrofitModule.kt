@@ -5,7 +5,6 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.structure.base_mvvm.BuildConfig
 import com.structure.base_mvvm.data.local.preferences.AppPreferences
-import com.readystatesoftware.chuck.ChuckInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -31,9 +30,6 @@ object RetrofitModule {
     Interceptor { chain ->
       chain.proceed(
         chain.request().newBuilder()
-          .addHeader("Authorization", "Bearer ${appPreferences.userToken ?: ""}")
-          .addHeader("Accept", "application/json")
-          .addHeader("language", "ar")
           .build()
       )
     }
@@ -59,7 +55,6 @@ object RetrofitModule {
         .connectTimeout(REQUEST_TIME_OUT, TimeUnit.SECONDS)
         .addInterceptor(headersInterceptor)
         .addNetworkInterceptor(logging)
-        .addInterceptor(ChuckInterceptor(context))
         .build()
     } else {
       OkHttpClient.Builder()

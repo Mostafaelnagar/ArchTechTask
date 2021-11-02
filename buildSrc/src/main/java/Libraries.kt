@@ -58,14 +58,12 @@ object Libraries {
     "com.google.android.gms:play-services-location:${Versions.playServicesLocation}"
   const val rxLocation = "com.github.ShabanKamell:RxLocation:${Versions.rxLocation}"
 
-  //FireBase
-//  implementation platform('com.google.firebase:firebase-bom:26.5.0')
-//  implementation 'com.google.firebase:firebase-core'
-//  implementation 'com.google.firebase:firebase-messaging'
   const val firebase_platform = "com.google.firebase:firebase-bom:${Versions.firebase}"
   const val firebase_core = "com.google.firebase:firebase-core"
   const val firebase_messaging = "com.google.firebase:firebase-messaging-ktx:${Versions.firebase}"
 
   //multi select media
   const val ted_bottom_picker = "gun0912.ted:tedbottompicker:${Versions.ted_bottom_picker}"
+  const val full_screen = "com.github.stfalcon:frescoimageviewer:${Versions.full_screen}"
+  const val picasso = "com.squareup.picasso:picasso:${Versions.picasso}"
 }

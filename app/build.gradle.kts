@@ -1,5 +1,4 @@
 import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
-
 plugins {
   id(Config.Plugins.androidApplication)
   id(Config.Plugins.kotlinAndroid)
@@ -88,7 +87,6 @@ dependencies {
 
   // Hilt
   implementation(Libraries.hilt)
-  implementation("com.google.firebase:firebase-messaging-ktx:22.0.0")
   kapt(Libraries.hiltDaggerCompiler)
   // Project Modules
   implementation(project(Config.Modules.domain))

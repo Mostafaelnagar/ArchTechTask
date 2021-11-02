@@ -1,9 +1,7 @@
 package com.structure.base_mvvm.core.di.module
 
-import com.structure.base_mvvm.data.account.data_source.remote.AccountServices
-import com.structure.base_mvvm.data.auth.data_source.remote.AuthServices
 import com.structure.base_mvvm.data.general.data_source.remote.GeneralServices
-import com.structure.base_mvvm.data.home.data_source.remote.HomeServices
+import com.structure.base_mvvm.data.movieDetails.data_source.remote.MovieDetailsServices
 import com.structure.base_mvvm.data.search.data_source.remote.SearchServices
 import dagger.Module
 import dagger.Provides
@@ -18,16 +16,6 @@ object NetworkServicesModule {
 
   @Provides
   @Singleton
-  fun provideAuthServices(retrofit: Retrofit): AuthServices =
-    retrofit.create(AuthServices::class.java)
-
-  @Provides
-  @Singleton
-  fun provideAccountServices(retrofit: Retrofit): AccountServices =
-    retrofit.create(AccountServices::class.java)
-
-  @Provides
-  @Singleton
   fun provideGeneralServices(retrofit: Retrofit): GeneralServices =
     retrofit.create(GeneralServices::class.java)
 
@@ -38,6 +26,7 @@ object NetworkServicesModule {
 
   @Provides
   @Singleton
-  fun provideHomeServices(retrofit: Retrofit): HomeServices =
-    retrofit.create(HomeServices::class.java)
+  fun provideMovieServices(retrofit: Retrofit): MovieDetailsServices =
+    retrofit.create(MovieDetailsServices::class.java)
+
 }

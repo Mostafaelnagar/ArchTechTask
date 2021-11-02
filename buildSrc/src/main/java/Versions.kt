@@ -51,4 +51,8 @@ object Versions {
 
   //ted bottom picker
   const val ted_bottom_picker = "2.0.1"
+
+  // fullscreen
+  const val full_screen = "0.1.0"
+  const val picasso = "2.71828"
 }

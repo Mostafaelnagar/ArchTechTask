@@ -1,4 +1,4 @@
-rootProject.name = "Kotlin-Base-MVVM"
+rootProject.name = "Kotlin-Movie-MVVM"
 
 // Include all the existent modules in the project
 rootDir

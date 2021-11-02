@@ -23,6 +23,7 @@ import coil.transform.CircleCropTransformation
 import coil.transform.RoundedCornersTransformation
 import com.google.android.material.snackbar.Snackbar
 import com.structure.base_mvvm.presentation.R
+import com.structure.base_mvvm.presentation.base.utils.BaseUtils
 
 fun View.show() {
   if (visibility == View.VISIBLE) return
@@ -106,7 +107,7 @@ fun View.showSnackBar(
 fun ImageView.loadImage(imageUrl: String?, progressBar: ProgressBar?) {
   if (imageUrl != null && imageUrl.isNotEmpty()) {
     val request = ImageRequest.Builder(context)
-      .data(imageUrl)
+      .data(BaseUtils.IMAGE_BASE_URL + imageUrl)
       .crossfade(true)
       .crossfade(400)
       .placeholder(R.color.backgroundGray)
@@ -135,11 +136,12 @@ fun ImageView.loadImage(imageUrl: String?, progressBar: ProgressBar?) {
   }
 }
 
+
 @BindingAdapter(value = ["app:loadCircleImage", "app:progressBar"], requireAll = false)
 fun ImageView.loadCircleImage(imageUrl: String?, progressBar: ProgressBar?) {
   if (imageUrl != null && imageUrl.isNotEmpty()) {
     val request = ImageRequest.Builder(context)
-      .data(imageUrl)
+      .data(BaseUtils.IMAGE_BASE_URL + imageUrl)
       .crossfade(true)
       .crossfade(400)
       .placeholder(R.color.backgroundGray)
