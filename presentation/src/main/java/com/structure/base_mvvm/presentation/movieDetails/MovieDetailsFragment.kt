@@ -1,7 +1,9 @@
 package com.structure.base_mvvm.presentation.movieDetails
 
+import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.navArgs
 import com.structure.base_mvvm.domain.search.models.MovieData
 import com.structure.base_mvvm.domain.utils.Resource
@@ -12,7 +14,6 @@ import com.structure.base_mvvm.presentation.movieDetails.viewModels.MovieDetails
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 
-import com.stfalcon.frescoimageviewer.ImageViewer
 import com.structure.base_mvvm.presentation.R
 
 
@@ -39,6 +40,16 @@ class MovieDetailsFragment : BaseFragment<FragmentMovieDetailsBinding>() {
 
   override
   fun setupObservers() {
+    viewModel.openPosterImageFullEvent.observe(this) {
+      val extras = FragmentNavigatorExtras(binding.icPoster to "movie_poster_full")
+      val action =
+        MovieDetailsFragmentDirections.actionMovieDetailsFragmentToMovieFullImageFragment()
+      navigateSafeTransition(
+        action.actionId,
+        bundle = bundleOf("poster_image" to viewModel.movieData.posterPath),
+        extras = extras
+      )
+    }
     lifecycleScope.launchWhenResumed {
       viewModel.videoResponse.collect {
         when (it) {

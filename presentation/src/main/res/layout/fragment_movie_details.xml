@@ -21,7 +21,9 @@
       android:layout_height="@dimen/dimen250"
       android:scaleType="centerCrop"
       android:src="@drawable/bg_no_image"
+      android:transitionName="movie_poster"
       app:layout_constraintTop_toTopOf="parent"
+      android:onClick="@{()->viewModel.openFullImage()}"
       app:loadImage="@{viewModel.movieData.posterPath}" />
 
     <androidx.appcompat.widget.AppCompatTextView

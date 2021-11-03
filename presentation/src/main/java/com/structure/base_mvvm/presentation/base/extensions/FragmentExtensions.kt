@@ -1,6 +1,7 @@
 package com.structure.base_mvvm.presentation.base.extensions
 
 import android.app.Activity
+import android.os.Bundle
 import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.activity.OnBackPressedCallback
@@ -10,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavDirections
 import androidx.navigation.NavOptions
+import androidx.navigation.fragment.FragmentNavigator
 import androidx.navigation.fragment.findNavController
 import coil.ImageLoader
 import coil.request.ImageRequest
@@ -95,6 +97,15 @@ fun Fragment.onBackPressedCustomAction(action: () -> Unit) {
 
 fun Fragment.navigateSafe(directions: NavDirections, navOptions: NavOptions? = null) {
   findNavController().navigate(directions, navOptions)
+}
+
+fun Fragment.navigateSafeTransition(
+  action: Int,
+  navOptions: NavOptions? = null,
+  bundle: Bundle? = null,
+  extras: FragmentNavigator.Extras
+) {
+  findNavController().navigate(action, bundle, navOptions, extras)
 }
 
 fun Fragment.backToPreviousScreen() {

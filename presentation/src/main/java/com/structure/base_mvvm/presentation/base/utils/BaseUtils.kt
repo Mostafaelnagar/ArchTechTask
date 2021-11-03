@@ -4,7 +4,7 @@ class BaseUtils {
   companion object {
     const val IMAGE_BASE_URL: String = "https://image.tmdb.org/t/p/original"
     const val MOVIE_DETAILS: Int = 1
-    const val MOVIE_VIDEO: Int = 2
+    const val MOVIE_POSTER_FULL: Int = 2
 
   }
 }
