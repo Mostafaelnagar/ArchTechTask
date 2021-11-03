@@ -1,6 +1,6 @@
 object Config {
   object AppConfig {
-    const val appId = "com.mina_mikhail.base_mvvm"
+    const val appId = "com.base_mvvm"
     const val compileSdkVersion = 30
     const val minSdkVersion = 21
     const val versionCode = 1

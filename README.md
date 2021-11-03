@@ -9,4 +9,5 @@ Using Android Clean Architecture
 <li>Retrofit</li>
 <li>Navigation component</li>
 <li>MVVM</li>
+<li>Dagger Hilt</li>
 </ul>
